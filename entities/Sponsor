@@ -1,0 +1,77 @@
+{
+  "name": "Sponsor",
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string"
+    },
+    "logo_url": {
+      "type": "string"
+    },
+    "league_id": {
+      "type": "string"
+    },
+    "valor_temporada": {
+      "type": "number",
+      "default": 0
+    },
+    "valor_rodada": {
+      "type": "number",
+      "default": 0
+    },
+    "bonus": {
+      "type": "number",
+      "default": 0
+    },
+    "meta": {
+      "type": "string"
+    },
+    "clausula": {
+      "type": "string"
+    },
+    "contract_duration": {
+      "type": "string",
+      "description": "Ex: 1 temporada, 2 temporadas"
+    },
+    "tier": {
+      "type": "string",
+      "enum": [
+        "S",
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "default": "C"
+    },
+    "min_reputation": {
+      "type": "number",
+      "default": 0
+    },
+    "accepted_financial_risk": {
+      "type": "string",
+      "enum": [
+        "muito_dinheiro_sobrando",
+        "pouco_dinheiro_sobrando",
+        "devendo_dinheiro"
+      ],
+      "default": "muito_dinheiro_sobrando"
+    },
+    "accepted_sporting_risk": {
+      "type": "string",
+      "enum": [
+        "equipe_top",
+        "equipe_media",
+        "equipe_parte_baixa"
+      ],
+      "default": "equipe_top"
+    },
+    "ativo": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "nome"
+  ]
+}

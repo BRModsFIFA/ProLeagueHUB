@@ -1,0 +1,32 @@
+{
+  "name": "ScheduleWindow",
+  "type": "object",
+  "properties": {
+    "league_id": {
+      "type": "string"
+    },
+    "rodada": {
+      "type": "number"
+    },
+    "dia_inicio": {
+      "type": "string",
+      "format": "date"
+    },
+    "dia_fim": {
+      "type": "string",
+      "format": "date"
+    },
+    "tipo": {
+      "type": "string",
+      "enum": [
+        "normal",
+        "coringa"
+      ],
+      "default": "normal"
+    }
+  },
+  "required": [
+    "league_id",
+    "rodada"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Notification",
+  "type": "object",
+  "properties": {
+    "destinatario_email": {
+      "type": "string"
+    },
+    "tipo": {
+      "type": "string",
+      "enum": [
+        "transferencia",
+        "contraproposta",
+        "jogo",
+        "punicao",
+        "patrocinador",
+        "alerta_financeiro",
+        "sistema"
+      ],
+      "default": "sistema"
+    },
+    "titulo": {
+      "type": "string"
+    },
+    "mensagem": {
+      "type": "string"
+    },
+    "lida": {
+      "type": "boolean",
+      "default": false
+    },
+    "referencia_id": {
+      "type": "string"
+    },
+    "referencia_tipo": {
+      "type": "string"
+    },
+    "league_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "destinatario_email",
+    "titulo"
+  ]
+}

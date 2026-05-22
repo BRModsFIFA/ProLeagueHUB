@@ -1,0 +1,47 @@
+{
+  "name": "ScheduleProposal",
+  "type": "object",
+  "properties": {
+    "match_id": {
+      "type": "string"
+    },
+    "league_id": {
+      "type": "string"
+    },
+    "proponente_email": {
+      "type": "string"
+    },
+    "proponente_team_id": {
+      "type": "string"
+    },
+    "adversario_team_id": {
+      "type": "string"
+    },
+    "data_proposta": {
+      "type": "string"
+    },
+    "hora_proposta": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pendente",
+        "aceita",
+        "recusada",
+        "contraproposta"
+      ],
+      "default": "pendente"
+    },
+    "data_contraproposta": {
+      "type": "string"
+    },
+    "hora_contraproposta": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "match_id",
+    "proponente_email"
+  ]
+}

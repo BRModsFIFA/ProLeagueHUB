@@ -1,0 +1,33 @@
+{
+  "name": "DatabaseBackupSnapshot",
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "description": "Nome descritivo do backup"
+    },
+    "descricao": {
+      "type": "string"
+    },
+    "league_id": {
+      "type": "string"
+    },
+    "tipo": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "automatico"
+      ],
+      "default": "manual"
+    },
+    "total_jogadores": {
+      "type": "number"
+    },
+    "total_times": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "nome"
+  ]
+}

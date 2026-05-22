@@ -1,0 +1,37 @@
+{
+  "name": "TableZone",
+  "type": "object",
+  "properties": {
+    "competition_id": {
+      "type": "string"
+    },
+    "nome": {
+      "type": "string"
+    },
+    "cor": {
+      "type": "string",
+      "default": "#22c55e"
+    },
+    "pos_inicio": {
+      "type": "number",
+      "default": 1
+    },
+    "pos_fim": {
+      "type": "number",
+      "default": 1
+    },
+    "descricao": {
+      "type": "string"
+    },
+    "ativa": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "competition_id",
+    "nome",
+    "pos_inicio",
+    "pos_fim"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "TeamsBackup",
+  "type": "object",
+  "properties": {
+    "snapshot_id": {
+      "type": "string"
+    },
+    "original_id": {
+      "type": "string"
+    },
+    "nome": {
+      "type": "string"
+    },
+    "escudo_url": {
+      "type": "string"
+    },
+    "league_id": {
+      "type": "string"
+    },
+    "player_email": {
+      "type": "string"
+    },
+    "orcamento": {
+      "type": "number"
+    },
+    "folha_salarial": {
+      "type": "number"
+    },
+    "valor_clube": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "snapshot_id",
+    "original_id"
+  ]
+}

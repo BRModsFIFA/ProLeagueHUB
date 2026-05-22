@@ -1,0 +1,79 @@
+{
+  "name": "Negotiation",
+  "type": "object",
+  "properties": {
+    "league_id": {
+      "type": "string"
+    },
+    "player_id": {
+      "type": "string"
+    },
+    "player_nome": {
+      "type": "string"
+    },
+    "player_foto": {
+      "type": "string"
+    },
+    "comprador_team_id": {
+      "type": "string"
+    },
+    "comprador_team_nome": {
+      "type": "string"
+    },
+    "vendedor_team_id": {
+      "type": "string"
+    },
+    "vendedor_team_nome": {
+      "type": "string"
+    },
+    "tipo": {
+      "type": "string",
+      "enum": [
+        "compra",
+        "emprestimo",
+        "multa_rescisoria"
+      ],
+      "default": "compra"
+    },
+    "modo": {
+      "type": "string",
+      "enum": [
+        "direta",
+        "delegada"
+      ],
+      "default": "direta"
+    },
+    "valor_proposta": {
+      "type": "number",
+      "default": 0
+    },
+    "valor_contraproposta": {
+      "type": "number"
+    },
+    "salario_proposto": {
+      "type": "number",
+      "default": 0
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pendente",
+        "aceito",
+        "recusado",
+        "contraproposta",
+        "expirado"
+      ],
+      "default": "pendente"
+    },
+    "expira_em": {
+      "type": "string"
+    },
+    "notas": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "player_id",
+    "comprador_team_id"
+  ]
+}

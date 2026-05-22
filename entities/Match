@@ -1,0 +1,61 @@
+{
+  "name": "Match",
+  "type": "object",
+  "properties": {
+    "league_id": {
+      "type": "string"
+    },
+    "rodada": {
+      "type": "number"
+    },
+    "home_team_id": {
+      "type": "string"
+    },
+    "home_team_nome": {
+      "type": "string"
+    },
+    "home_team_escudo": {
+      "type": "string"
+    },
+    "away_team_id": {
+      "type": "string"
+    },
+    "away_team_nome": {
+      "type": "string"
+    },
+    "away_team_escudo": {
+      "type": "string"
+    },
+    "gols_home": {
+      "type": "number",
+      "default": 0
+    },
+    "gols_away": {
+      "type": "number",
+      "default": 0
+    },
+    "data_hora": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pendente",
+        "agendado",
+        "em_andamento",
+        "finalizado",
+        "aprovado"
+      ],
+      "default": "pendente"
+    },
+    "aprovado_por": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "league_id",
+    "rodada",
+    "home_team_id",
+    "away_team_id"
+  ]
+}

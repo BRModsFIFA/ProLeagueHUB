@@ -1,0 +1,51 @@
+{
+  "name": "Finance",
+  "type": "object",
+  "properties": {
+    "team_id": {
+      "type": "string"
+    },
+    "league_id": {
+      "type": "string"
+    },
+    "tipo": {
+      "type": "string",
+      "enum": [
+        "receita",
+        "despesa"
+      ]
+    },
+    "categoria": {
+      "type": "string",
+      "enum": [
+        "patrocinio",
+        "tv",
+        "merchandising",
+        "premiacao",
+        "transferencia_entrada",
+        "salario",
+        "multa",
+        "transferencia_saida",
+        "outro"
+      ]
+    },
+    "descricao": {
+      "type": "string"
+    },
+    "valor": {
+      "type": "number"
+    },
+    "rodada": {
+      "type": "number"
+    },
+    "referencia_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "team_id",
+    "tipo",
+    "categoria",
+    "valor"
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "name": "League",
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "description": "Nome da liga/competi\u00e7\u00e3o"
+    },
+    "descricao": {
+      "type": "string"
+    },
+    "temporada": {
+      "type": "string",
+      "description": "Ex: 2024/2025"
+    },
+    "rodada_atual": {
+      "type": "number",
+      "default": 1
+    },
+    "total_rodadas": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "ativa",
+        "pausada",
+        "encerrada"
+      ],
+      "default": "ativa"
+    },
+    "max_times": {
+      "type": "number",
+      "default": 20
+    },
+    "calendario_gerado": {
+      "type": "boolean",
+      "default": false
+    },
+    "logo_url": {
+      "type": "string"
+    },
+    "emoji": {
+      "type": "string",
+      "description": "Emoji opcional para exibi\u00e7\u00e3o visual da competi\u00e7\u00e3o"
+    },
+    "categoria": {
+      "type": "string",
+      "enum": [
+        "liga_domestica",
+        "copa_domestica",
+        "internacional"
+      ],
+      "default": "liga_domestica"
+    },
+    "formato": {
+      "type": "string",
+      "enum": [
+        "pontos_corridos",
+        "grupos_mata_mata",
+        "mata_mata"
+      ],
+      "default": "pontos_corridos"
+    },
+    "pais": {
+      "type": "string"
+    },
+    "nacionalidade_base": {
+      "type": "string"
+    },
+    "tipo_turno": {
+      "type": "string",
+      "enum": [
+        "turno_unico",
+        "turno_e_returno"
+      ],
+      "default": "turno_e_returno"
+    },
+    "num_grupos": {
+      "type": "number",
+      "default": 4
+    },
+    "classificados_por_grupo": {
+      "type": "number",
+      "default": 2
+    },
+    "mata_mata_partidas": {
+      "type": "string",
+      "enum": [
+        "jogo_unico",
+        "ida_e_volta"
+      ],
+      "default": "ida_e_volta"
+    },
+    "disputa_terceiro": {
+      "type": "boolean",
+      "default": false
+    },
+    "final_jogo_unico": {
+      "type": "boolean",
+      "default": true
+    },
+    "criterios_desempate": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": [
+        "pontos",
+        "vitorias",
+        "saldo_gols",
+        "gols_pro"
+      ]
+    },
+    "registration_status": {
+      "type": "string",
+      "enum": [
+        "fechado",
+        "aberto"
+      ],
+      "default": "fechado"
+    },
+    "prize_pool_brl": {
+      "type": "number",
+      "default": 0
+    },
+    "approved_teams_count": {
+      "type": "number",
+      "default": 0
+    },
+    "regra_limite_orcamento_ativo": {
+      "type": "boolean",
+      "default": false
+    },
+    "regra_limite_orcamento_pct": {
+      "type": "number",
+      "default": 70
+    },
+    "regra_caixa_minimo_ativo": {
+      "type": "boolean",
+      "default": false
+    },
+    "regra_caixa_minimo_valor": {
+      "type": "number",
+      "default": 5000000
+    },
+    "regra_limite_elenco_ativo": {
+      "type": "boolean",
+      "default": false
+    },
+    "regra_limite_elenco_qtd": {
+      "type": "number",
+      "default": 30
+    },
+    "regra_limite_estrangeiros_ativo": {
+      "type": "boolean",
+      "default": false
+    },
+    "regra_limite_estrangeiros_qtd": {
+      "type": "number",
+      "default": 7
+    },
+    "league_id": {
+      "type": "string",
+      "description": "ID customizado da competi\u00e7\u00e3o no formato C1, C2, C3..."
+    }
+  },
+  "required": [
+    "nome",
+    "temporada"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "name": "CompetitionRegistration",
+  "type": "object",
+  "properties": {
+    "competition_id": {
+      "type": "string"
+    },
+    "team_id": {
+      "type": "string"
+    },
+    "team_nome": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "user_email": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pendente",
+        "aprovado",
+        "recusado",
+        "pago",
+        "isento"
+      ],
+      "default": "pendente"
+    },
+    "registration_fee_brl": {
+      "type": "number",
+      "default": 0
+    },
+    "team_registration_fee_brl": {
+      "type": "number",
+      "default": 0,
+      "description": "Taxa de inscri\u00e7\u00e3o espec\u00edfica do time"
+    },
+    "amount_paid_brl": {
+      "type": "number",
+      "default": 0
+    },
+    "payment_status": {
+      "type": "string",
+      "enum": [
+        "pendente",
+        "pago",
+        "isento"
+      ],
+      "default": "pendente"
+    },
+    "paid_at": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "competition_id",
+    "team_id"
+  ]
+}

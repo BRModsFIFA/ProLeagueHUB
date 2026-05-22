@@ -1,0 +1,99 @@
+{
+  "name": "Team",
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "description": "Nome do time"
+    },
+    "escudo_url": {
+      "type": "string"
+    },
+    "league_id": {
+      "type": "string"
+    },
+    "player_email": {
+      "type": "string",
+      "description": "Email do dono/jogador"
+    },
+    "player_name": {
+      "type": "string"
+    },
+    "owner_user_id": {
+      "type": "string"
+    },
+    "owner_name": {
+      "type": "string"
+    },
+    "owner_email": {
+      "type": "string"
+    },
+    "owner_display_name": {
+      "type": "string"
+    },
+    "treinador": {
+      "type": "string"
+    },
+    "orcamento": {
+      "type": "number",
+      "default": 0
+    },
+    "folha_salarial": {
+      "type": "number",
+      "default": 0
+    },
+    "valor_clube": {
+      "type": "number",
+      "default": 0
+    },
+    "margem_fpf": {
+      "type": "number",
+      "default": 0
+    },
+    "reputation": {
+      "type": "number",
+      "default": 50
+    },
+    "sporting_risk": {
+      "type": "string",
+      "enum": [
+        "equipe_top",
+        "equipe_media",
+        "equipe_parte_baixa"
+      ],
+      "default": "equipe_media"
+    },
+    "cor_primaria": {
+      "type": "string",
+      "default": "#22c55e"
+    },
+    "cor_secundaria": {
+      "type": "string",
+      "default": "#000000"
+    },
+    "registration_fee_brl": {
+      "type": "number",
+      "default": 0,
+      "description": "Taxa de inscri\u00e7\u00e3o do time em Reais"
+    },
+    "prestige_level": {
+      "type": "string",
+      "enum": [
+        "bronze",
+        "prata",
+        "ouro",
+        "platina",
+        "diamante"
+      ],
+      "default": "prata",
+      "description": "N\u00edvel de prest\u00edgio do clube"
+    },
+    "registration_fee_notes": {
+      "type": "string",
+      "description": "Observa\u00e7\u00f5es sobre a taxa de inscri\u00e7\u00e3o"
+    }
+  },
+  "required": [
+    "nome"
+  ]
+}
