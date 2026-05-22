@@ -1,0 +1,35 @@
+{
+  "name": "ActivityLog",
+  "type": "object",
+  "properties": {
+    "league_id": {
+      "type": "string"
+    },
+    "tipo": {
+      "type": "string",
+      "enum": [
+        "transferencia",
+        "importacao",
+        "calendario",
+        "exclusao",
+        "punicao",
+        "backup",
+        "admin",
+        "outro"
+      ]
+    },
+    "descricao": {
+      "type": "string"
+    },
+    "usuario_email": {
+      "type": "string"
+    },
+    "detalhes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "tipo",
+    "descricao"
+  ]
+}
